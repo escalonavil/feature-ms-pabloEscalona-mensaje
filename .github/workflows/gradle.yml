@@ -21,7 +21,7 @@ jobs:
       with:
         java-version: '11'
         distribution: 'temurin'
-    - name: Se cambian los permisos de gradle    
+       
     - run: |
         chmod +x gradlew
         
