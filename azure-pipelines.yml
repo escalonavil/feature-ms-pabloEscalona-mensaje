@@ -10,5 +10,16 @@ steps:
     javaHomeOption: 'JDKVersion'
     sonarQubeRunAnalysis: false
     spotBugsAnalysis: false
+
+Settings
+-task: SonarCloudPrepare@1
+ inputs:
+   SonarCloud: 'Sonarcloud'
+   organization: 'escalonavil' 
+   scannerMode:'MSBuild'
+   projectKey: 'escalonavil_feature-ms-pabloEscalona-mensaje'
+   projectName: 'escalonavil_feature-ms-pabloEscalona-mensaje'
+   projectVersion: '2.6.0'
+
   
   
