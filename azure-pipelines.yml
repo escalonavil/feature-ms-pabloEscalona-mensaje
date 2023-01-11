@@ -43,14 +43,16 @@ steps:
     command: 'build'
     Dockerfile: '**/Dockerfile'
     tags: 'latest'
-  displayName: Se realiza el build en docker
+  displayName: Se realiza el build en docker  
 - task: Docker@2
   inputs:
     containerRegistry: 'docker pablo escalona'
     repository: 'escalonavil/PabloEscalonaLaboratorio'
     command: 'push'
     tags: 'latest'
-  displayName: Se realiza el push en docker
+  displayName: Se realiza el build en docker
+  
+
 
 
 
