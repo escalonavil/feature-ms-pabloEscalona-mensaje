@@ -10,6 +10,7 @@ steps:
     javaHomeOption: 'JDKVersion'
     sonarQubeRunAnalysis: false
     spotBugsAnalysis: false
+  displayName: Se realiza la compilacion
 - task: SonarCloudPrepare@1
   inputs:
     SonarCloud: 'feature-ms-pabloEscalona-mensaje'
@@ -17,6 +18,19 @@ steps:
     scannerMode: 'MSBuild'
     projectKey: 'escalonavil_feature-ms-pabloEscalona-mensaje'
     projectName: 'feature-ms-pabloEscalona-mensaje'
+  displayName: Se realiza la preparacion sonar cloud
+- task: Gradle@3
+  inputs:
+    gradleWrapperFile: 'gradlew'
+    tasks: 'sonarqube'
+    publishJUnitResults: true
+    testResultsFiles: '**/TEST-*.xml'
+    javaHomeOption: 'JDKVersion'
+    sonarQubeRunAnalysis: true
+    sqGradlePluginVersionChoice: 'specify'
+    sonarQubeGradlePluginVersion: '3.3'
+    spotBugsAnalysis: false
+  displayName: Se realiza el analisis sonar cloud
 
 
 
