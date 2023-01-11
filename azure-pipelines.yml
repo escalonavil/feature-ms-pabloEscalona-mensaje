@@ -10,7 +10,7 @@ steps:
     javaHomeOption: 'JDKVersion'
     sonarQubeRunAnalysis: false
     spotBugsAnalysis: false
-  displayName: Se realiza la compilacion
+  displayName: Pablo Escalona, se realiza la compilacion
 - task: SonarCloudPrepare@1
   inputs:
     SonarCloud: 'feature-ms-pabloEscalona-mensaje'
@@ -31,6 +31,11 @@ steps:
     sonarQubeGradlePluginVersion: '3.3'
     spotBugsAnalysis: false
   displayName: Se realiza el analisis sonar cloud
+- task: Docker@2
+  inputs:
+    containerRegistry: 'docker pablo escalona'
+    command: 'login'
+  displayName: Se realiza el login docker
 
 
 
