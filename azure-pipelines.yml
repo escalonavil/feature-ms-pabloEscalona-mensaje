@@ -11,6 +11,12 @@ steps:
     sonarQubeRunAnalysis: false
     spotBugsAnalysis: false
   displayName: Pablo Escalona, se realiza la compilacion
+- task: PublishCodeCoverageResults@1
+  inputs:
+    codeCoverageTool: 'JaCoCo'
+    summaryFileLocation: '$(Build.SourcesDirectory)\build\reports\jacoco\test\jacocoTestReport.xml'
+  displayName: Cobertura con Jacoco
+
 - task: SonarCloudPrepare@1
   inputs:
     SonarCloud: 'feature-ms-pabloEscalona-mensaje'
