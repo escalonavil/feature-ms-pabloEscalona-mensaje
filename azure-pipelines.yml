@@ -63,7 +63,7 @@ steps:
     arguments: '-f deployment-app.yml'
     secretType: 'dockerRegistry'
     containerRegistryType: 'Azure Container Registry'
-  displayName: Se realiza apply de kubernetes  y se configura ruta del yml de deployment
+  displayName: Se realiza Deploy de kubernetes  y se configura ruta del yml de deployment
 
 
   
