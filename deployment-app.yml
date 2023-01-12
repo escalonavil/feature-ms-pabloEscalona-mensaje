@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: feature-ms-pabloEscalona-mensaje-deployment
+  name: feature-ms-pabloEscalona-mensaje
   labels:
     app: feature-ms-pabloEscalona-mensaje
 spec:
