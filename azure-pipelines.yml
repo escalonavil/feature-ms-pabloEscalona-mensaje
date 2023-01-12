@@ -50,7 +50,7 @@ steps:
     repository: 'escalonavil/PabloEscalonaLaboratorio'
     command: 'push'
     tags: 'latest'
-  displayName: Se realiza el build en docker
+  displayName: Se realiza el push en docker
   
 
 
