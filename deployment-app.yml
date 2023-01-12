@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: feature-ms-pabloEscalona-mensaje-deployment
+  labels:
+    app: feature-ms-pabloEscalona-mensaje
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: feature-ms-pabloEscalona-mensaje
+  template:
+    metadata:
+      labels:
+        app: feature-ms-pabloEscalona-mensaje
+    spec:
+      containers:
+      - name: feature-ms-pabloEscalona-mensaje
+        image: escalonavil/PabloEscalonaLaboratorio:latest
+        ports:
+        - containerPort: 8085
