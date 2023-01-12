@@ -51,6 +51,21 @@ steps:
     command: 'push'
     tags: 'latest'
   displayName: Se realiza el push en docker
+- task: KubectlInstaller@0
+  inputs:
+    kubectlVersion: 'latest'
+  displayName: Se realiza instalacion kubernetes
+- task: Kubernetes@1
+  inputs:
+    connectionType: 'None'
+    namespace: 'default'
+    command: 'apply'
+    arguments: '-f deployment-app.yml'
+    secretType: 'dockerRegistry'
+    containerRegistryType: 'Azure Container Registry'
+  displayName: Se realiza apply de kubernetes  y se configura ruta del yml de deployment
+
+
   
 
 
